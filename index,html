@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eiffel Tower Proposal</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34") center/cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 500px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background: #c9a23f;
+      color: black;
+      padding: 14px 26px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #c9a23f;
+      margin-bottom: 30px;
+    }
+
+    /* STEPS */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .step {
+      padding: 25px;
+      border-radius: 6px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      background: white;
+    }
+
+    /* PACKAGES */
+    .packages {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .package {
+      padding: 30px;
+      border-radius: 6px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      background: #f9f9f9;
+    }
+
+    /* FORM */
+    form {
+      max-width: 420px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: black;
+      color: white;
+      padding: 14px;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* DESKTOP */
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 3.2rem;
+      }
+
+      .steps, .packages {
+        flex-direction: row;
+      }
+
+      .step, .package {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>💍 Eiffel Tower Proposal</h1>
+    <p>We plan romantic and unforgettable marriage proposals in Paris, right in front of the Eiffel Tower.</p>
+    <a href="#book" class="btn">Book Your Proposal</a>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section>
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">📅 Choose your preferred date & time</div>
+      <div class="step">🗼 We organize everything in Paris</div>
+      <div class="step">❤️ You propose — we capture the moment</div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section style="background:#f4f4f4;">
+    <h2>Proposal Packages</h2>
+    <div class="packages">
+      <div class="package">
+        <h3>Basic Proposal</h3>
+        <p>Simple, romantic setup</p>
+        <p><strong>From €499</strong></p>
+      </div>
+      <div class="package">
+        <h3>Luxury Proposal</h3>
+        <p>Roses, photographer & video</p>
+        <p><strong>From €999</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section id="book">
+    <h2>Book Your Proposal</h2>
+    <form>
+      <input type="text" placeholder="Your Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="date" required>
+      <textarea rows="4" placeholder="Tell us your proposal idea"></textarea>
+      <button type="submit">Send Booking Request</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Eiffel Tower Proposal · Paris</p>
+  </footer>
+
+</body>
+</html>
