@@ -1,108 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Eiffel Tower Proposal</title>
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter&display=swap" rel="stylesheet">
+
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: #222;
+      padding: 0;
     }
 
+    body {
+      font-family: "Inter", sans-serif;
+      color: #222;
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    h1, h2, h3 {
+      font-family: "Playfair Display", serif;
+    }
+
+    /* HERO */
     .hero {
       min-height: 100vh;
-      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-      url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34")
-      center/cover no-repeat;
+      background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34")
+        center/cover no-repeat;
       color: white;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 20px;
+      padding: 30px;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       margin-bottom: 15px;
     }
 
     .hero p {
-      max-width: 500px;
-      margin-bottom: 25px;
+      max-width: 520px;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
     }
 
     .btn {
-      background: #c9a23f;
+      background: #d4af37;
       color: black;
-      padding: 14px 26px;
+      padding: 15px 30px;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 4px;
+      border-radius: 30px;
+      transition: 0.3s;
     }
 
+    .btn:hover {
+      background: #c49f2d;
+    }
+
+    /* SECTIONS */
     section {
-      padding: 60px 20px;
+      padding: 70px 20px;
       text-align: center;
     }
 
     h2 {
-      color: #c9a23f;
-      margin-bottom: 30px;
+      color: #d4af37;
+      margin-bottom: 40px;
+      font-size: 2rem;
     }
 
+    /* STEPS */
     .steps {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 25px;
     }
 
     .step {
-      background: #fff;
-      padding: 25px;
-      border-radius: 6px;
-      box-shadow: 0 2px 10px rgba(0,0,0,.1);
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      font-size: 1.05rem;
+    }
+
+    /* PACKAGES */
+    .packages {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .package {
+      background: #fafafa;
+      padding: 35px;
+      border-radius: 14px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+    }
+
+    .package h3 {
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 1.4rem;
+      color: #d4af37;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    /* FORM */
+    .form-box {
+      max-width: 450px;
+      margin: auto;
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
     }
 
     form {
-      max-width: 420px;
-      margin: auto;
       display: flex;
       flex-direction: column;
       gap: 15px;
     }
 
-    input, textarea, button {
-      padding: 12px;
+    input, textarea {
+      padding: 14px;
       font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: inherit;
     }
 
     button {
       background: black;
       color: white;
+      padding: 14px;
+      font-size: 1rem;
       border: none;
+      border-radius: 30px;
       cursor: pointer;
     }
 
-    footer {
-      background: black;
-      color: white;
-      padding: 20px;
-      text-align: center;
+    button:hover {
+      background: #222;
     }
 
+    /* FOOTER */
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
+    }
+
+    /* DESKTOP */
     @media (min-width: 768px) {
-      .steps {
-        flex-direction: row;
+      .hero h1 {
+        font-size: 3.4rem;
       }
-      .step {
-        flex: 1;
+
+      .steps {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .packages {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -110,34 +189,57 @@
 
 <body>
 
+  <!-- HERO -->
   <div class="hero">
     <h1>💍 Eiffel Tower Proposal</h1>
-    <p>Plan a magical and unforgettable marriage proposal in Paris.</p>
-    <a href="#book" class="btn">Book Your Proposal</a>
+    <p>Luxury, romantic marriage proposals in Paris — perfectly planned, beautifully captured.</p>
+    <a href="#book" class="btn">Plan Your Proposal</a>
   </div>
 
+  <!-- HOW IT WORKS -->
   <section>
     <h2>How It Works</h2>
     <div class="steps">
-      <div class="step">📅 Choose your date</div>
-      <div class="step">🗼 We plan everything</div>
-      <div class="step">❤️ You propose</div>
+      <div class="step">📅 Tell us your date & idea</div>
+      <div class="step">🗼 We plan everything in Paris</div>
+      <div class="step">❤️ You propose at the Eiffel Tower</div>
     </div>
   </section>
 
-  <section id="book">
-    <h2>Book Your Proposal</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Email" required>
-      <input type="date" required>
-      <textarea placeholder="Your proposal idea"></textarea>
-      <button type="submit">Send Request</button>
-    </form>
+  <!-- PACKAGES -->
+  <section style="background:#f5f5f5;">
+    <h2>Proposal Packages</h2>
+    <div class="packages">
+      <div class="package">
+        <h3>Classic Proposal</h3>
+        <p>Romantic setup & coordination</p>
+        <div class="price">From €499</div>
+      </div>
+      <div class="package">
+        <h3>Luxury Proposal</h3>
+        <p>Roses, photographer & cinematic video</p>
+        <div class="price">From €999</div>
+      </div>
+    </div>
   </section>
 
+  <!-- BOOKING -->
+  <section id="book">
+    <h2>Book Your Proposal</h2>
+    <div class="form-box">
+      <form>
+        <input type="text" placeholder="Your Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="date" required>
+        <textarea rows="4" placeholder="Tell us your proposal idea"></textarea>
+        <button type="submit">Send Booking Request</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>© 2025 Eiffel Tower Proposal</p>
+    © 2025 Eiffel Tower Proposal · Paris · All Rights Reserved
   </footer>
 
 </body>
