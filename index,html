@@ -14,15 +14,19 @@
 
     body {
       font-family: Arial, sans-serif;
-      color: #222;
       line-height: 1.6;
+      color: #222;
     }
 
     /* HERO */
     .hero {
       min-height: 100vh;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34") center/cover;
+      background: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+      ),
+      url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34")
+      center/cover no-repeat;
       color: white;
       display: flex;
       flex-direction: column;
@@ -33,14 +37,14 @@
     }
 
     .hero h1 {
-      font-size: 2.4rem;
+      font-size: 2.5rem;
       margin-bottom: 15px;
     }
 
     .hero p {
-      font-size: 1.1rem;
       max-width: 500px;
       margin-bottom: 25px;
+      font-size: 1.1rem;
     }
 
     .btn {
@@ -52,7 +56,6 @@
       border-radius: 4px;
     }
 
-    /* SECTIONS */
     section {
       padding: 60px 20px;
       text-align: center;
@@ -73,10 +76,10 @@
     }
 
     .step {
+      background: white;
       padding: 25px;
       border-radius: 6px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      background: white;
     }
 
     /* PACKAGES */
@@ -89,10 +92,10 @@
     }
 
     .package {
+      background: #f7f7f7;
       padding: 30px;
       border-radius: 6px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-      background: #f9f9f9;
     }
 
     /* FORM */
@@ -120,7 +123,6 @@
       cursor: pointer;
     }
 
-    /* FOOTER */
     footer {
       background: black;
       color: white;
@@ -150,7 +152,7 @@
   <!-- HERO -->
   <div class="hero">
     <h1>💍 Eiffel Tower Proposal</h1>
-    <p>We plan romantic and unforgettable marriage proposals in Paris, right in front of the Eiffel Tower.</p>
+    <p>We plan unforgettable marriage proposals in Paris, right in front of the Eiffel Tower.</p>
     <a href="#book" class="btn">Book Your Proposal</a>
   </div>
 
@@ -158,19 +160,19 @@
   <section>
     <h2>How It Works</h2>
     <div class="steps">
-      <div class="step">📅 Choose your preferred date & time</div>
-      <div class="step">🗼 We organize everything in Paris</div>
-      <div class="step">❤️ You propose — we capture the moment</div>
+      <div class="step">📅 Choose your date & time</div>
+      <div class="step">🗼 We plan everything in Paris</div>
+      <div class="step">❤️ You propose, we capture the moment</div>
     </div>
   </section>
 
   <!-- PACKAGES -->
-  <section style="background:#f4f4f4;">
+  <section style="background:#f2f2f2;">
     <h2>Proposal Packages</h2>
     <div class="packages">
       <div class="package">
         <h3>Basic Proposal</h3>
-        <p>Simple, romantic setup</p>
+        <p>Simple romantic setup</p>
         <p><strong>From €499</strong></p>
       </div>
       <div class="package">
